@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/Site.css" rel="stylesheet" />
     
-   <script src="js/jquery-3.2.1.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/instascan.min.js" type="text/javascript"></script>
     
