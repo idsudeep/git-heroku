@@ -9,7 +9,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/Site.css" rel="stylesheet" />
     
-   
+   <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/instascan.min.js" type="text/javascript"></script>
     
     <style>
@@ -102,8 +103,7 @@
     </footer>
     <!--Footer End-->
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 </html>
   <script>
