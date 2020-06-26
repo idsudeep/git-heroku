@@ -52,14 +52,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="Home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                    
 
                 </ul>
            
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="swap/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><a href="swap/register.php"><span class="glyphicon glyphicon-user " style="float:left"></span> Register</a></li>
+                    <li><a href="insider/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="insider/register.php"><span class="glyphicon glyphicon-user " style="float:left"></span> Register</a></li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
