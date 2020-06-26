@@ -106,7 +106,7 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-  <script type="text/javascript">
+  <script>
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
         console.log(content);
