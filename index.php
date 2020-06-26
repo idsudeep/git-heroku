@@ -6,11 +6,11 @@
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="qrcode-gen/css/bootstrap.css" rel="stylesheet" />
-    <link href="qrcode-gen/css/Site.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/Site.css" rel="stylesheet" />
     
    
-    <script src="qrcode-gen/js/instascan.min.js" type="text/javascript"></script>
+    <script src="js/instascan.min.js" type="text/javascript"></script>
     
     <style>
     
@@ -102,7 +102,23 @@
     </footer>
     <!--Footer End-->
 
-    <script src="qrcode-gen/js/jquery-3.2.1.min.js"></script>
-    <script src="qrcode-gen/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+  <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        console.log(content);
+          document.getElementById('val').innerHTML=content;
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length >0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+    </script>
