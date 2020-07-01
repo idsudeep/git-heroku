@@ -97,10 +97,11 @@
     <!--Section End-->
     <!--Footer Start-->
     <footer class="container-fluid">
-        <p>© 2016 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
+	<p>© 2020 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
     </footer>
-    <!--Footer End-->
-
+  
+  <!--Footer End-->
+    
     
 </body>
 </html>
@@ -119,4 +120,6 @@
       }).catch(function (e) {
         console.error(e);
       });
-    </script>
+    </script>	
+
+
