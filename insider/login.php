@@ -22,12 +22,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class=" active navbar-brand" href="#">footline</a>
+                <a class=" active navbar-brand" href="../index.php">footline</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="../Home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-king"></span>  About</a></li>
 
                 </ul>

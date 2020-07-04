@@ -122,7 +122,7 @@ $d_type = whattype();
     <!--Footer Start-->
     <div class="container-fluid">
         <footer>
-        <p>© 2016 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
+        <p>© 2019 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
     </footer>
         
     </div>
