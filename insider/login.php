@@ -4,8 +4,8 @@
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="/css/bootstrap.css" rel="stylesheet" />
-    <link href="/css/Site.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/Site.css" rel="stylesheet" />
 
     
 </head>
@@ -85,7 +85,7 @@
     </div>
 
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
 </body>
 </html>

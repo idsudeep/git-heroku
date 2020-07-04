@@ -14,16 +14,11 @@ $d_type = whattype();
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="/css/bootstrap.css" rel="stylesheet" />
-    <link href="/css/css/Site.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/Site.css" rel="stylesheet" />
     
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <style>
-      body
-        {
-            z-index: 75%;
-        }
-    </style>
+
 </head>
 <body>
 
@@ -75,7 +70,8 @@ $d_type = whattype();
                                     <?php } ?>
 								   
 								   </div>
-            <div class="main-content col-sm-6 col-sm-push-3">
+            
+            <div class="col-sm-6 offset-3">
               
                 
 <div class="mainreg">
@@ -128,7 +124,7 @@ $d_type = whattype();
     </div>
     <!--Footer End-->
 
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
