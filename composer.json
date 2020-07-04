@@ -1,8 +1,4 @@
-{
-    url:'$ heroku config | grep CLEARDB_DATABASE_URL
-CLEARDB_DATABASE_URL: mysql://b0fb536755ba0e:e3654907@us-cdbr-east-02.cleardb.com/heroku_ca969364fd27562?reconnect=true
-'
-}
+
 
 {
   "require": {
