@@ -97,7 +97,7 @@
     <!--Section End-->
     <!--Footer Start-->
     <footer class="container-fluid">
-	<p>© 2020 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
+	<p>© 2019 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
     </footer>
   
   <!--Footer End-->
