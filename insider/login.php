@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +15,25 @@
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <link href="../css/Site.css" rel="stylesheet" />
 
+    <style>
     
+    footer
+        {
+        height: 150px;
+       margin-top: 55px;
+        }
+        .footer-text
+        {
+            
+            font-display: fallback;
+            text-overflow: clip;
+            font-family: monospace;
+            font-size: 15px;
+         
+            color: white;
+            font-display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -79,7 +105,7 @@
     <!--Footer Start-->
     <div class="container-fluid">
         <footer>
-        <p>© 2019 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
+        <p class="footer-text">© 2019 <a href="http://footline.com/">Footline</a>, All rights reserved.</p>
     </footer>
         
     </div>

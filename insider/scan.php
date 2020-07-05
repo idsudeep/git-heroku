@@ -1,15 +1,29 @@
+  <?php 
+
+    session_start();
+    require_once('../config.php');
+    require_once('function.php');
+ 
+       $loged = isLoggedIn() ;
+        $login_value = isLoggedIn();
+        if(!isset($login_value['fname']))
+      { header('location:login.php'); 
+       die();
+      }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/Site.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/Site.css" rel="stylesheet" />
     
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/instascan.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/instascan.min.js" type="text/javascript"></script>
     
     <style>
     
@@ -58,8 +72,8 @@
                 </ul>
            
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="insider/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><a href="insider/register.php"><span class="glyphicon glyphicon-user " style="float:left"></span> Register</a></li>
+                    <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+               
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -77,8 +91,13 @@
             <div class=" col-sm-6 col-sm-push-3">
                 <div class="jumbotron">
 
+                    <p id=ack>: </p>
+                    <legend> <h5 id="val"></h5> </legend>
+                    <div class="qrcode-block">
+                   <center> <video id="preview"></video></center>
+                    
+                    </div>
                   
-                  <hr>
                 </div>
    
             
@@ -100,6 +119,21 @@
     
 </body>
 </html>
-	
+  <script>
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        console.log(content);
+          document.getElementById('val').innerHTML=content;
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length >0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+    </script>	
 
 

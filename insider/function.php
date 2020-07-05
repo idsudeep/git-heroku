@@ -1,13 +1,7 @@
 <?php 
-
    require_once('../config.php');
-
     require_once ('whoami.php');
 
-
- 
-
-  
    function find_device()
    {
        
