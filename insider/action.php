@@ -1,4 +1,8 @@
-
+<html>
+<body>
+   
+    </body>
+</html>
 
 <?php 
 
@@ -227,7 +231,180 @@ else
       
   }
 /*end of login.php*/
+ if(isset($_POST['btn_login']) && $_GET['action']=='faculty_log')
+      
+  {
+     
+    
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+      
+    
+       $validation = validateInput(array('email'=>$email,
+                                         'password'=>$password
+                                        ));
+     
+     
+        if(count($validation)!=0)
+        {
+            $message ='';
+           foreach($validation as $errors)
+		 {
+			 $message .= $errors."<br/>";
+			 
+		 }
+		 MsgFlash('error','empty  fields . <br>'.$message);
+		 header ("location:faculty_log.php");
+		 die();  
+        }
+     
+     $sql = "select email,password from faculty_d where email ='$email' && password ='$password'";
+     
+       
+     $deploy = mysqli_query($connect,$sql);
+     
+     
+     
+        
+       if(mysqli_num_rows($deploy)!=0)
+           
+       {
+           
+             header('location:assign_subject.php');
+           
+                
+       }
+     
+     else 
+     {
+          MsgFlash('error','incorrect email or password ');
+         
+           header('location:faculty_log.php');
+         
+           die();
+     }
+     
+ }
+
+
+  if(isset($_POST['btn_mca']) && $_GET['action']== 'sub_value')
+      
+  {
+    /*  $ heroku config:get MONGODB_URI
+mongodb://heroku_p20lz4tt:e49gs91fn9qk090jnptkdab892@ds023105.mlab.com:23105/heroku_p20lz4tt   */
+      
+       
+      $sub_name = 'QTRA';
+      $sem ='MCA4';
+      
+      $faculty_id = "2468 ";
+      $coll_name = $sem."_".$sub_name;
+    
+      require '../vendor/autoload.php';
+      
+       $uri = "mongodb://heroku_p20lz4tt:e49gs91fn9qk090jnptkdab892@ds023105.mlab.com:23105/heroku_p20lz4tt?retryWrites=false";
+       
+      $client = new MongoDB\Client($uri);
+      
+      
  
+   $collection = $client->heroku_p20lz4tt->$coll_name;
+   
+      
+      $criteria = array('std_id' =>$faculty_id);
+      
+       $cursor= $collection->findOne($criteria);  
+ 
+      
+   
+      
+    
+     
+    
+      /* finding One set */
+ foreach ($cursor as $cur) 
+ {
+ }  
+     if(empty($cur))
+       {
+            $date = date("d/m/yy");
+            $code = rand();
+            $document = array(
+            "std_id"=>$faculty_id,
+            "subject"=>$sub_name,
+            "date"=>$date,
+            "status"=>"A",
+            "qrcode"=>$code);
+     
+                $insert = $collection->insertOne($document);
+                  
+     
+      
+         
+      header("location:../generator/qrcode_gen.php?collection=".$coll_name);
+       echo "successfully update";
+                        die();
+       }
+     else 
+     {
+         /* Insert into collections*/
+       $document = array("subject"=>$sub_name);
+         $deleteResult = $collection->deleteMany($document);
+            header("location:../insider/assign_subject.php");
+           echo "successfully deleted ";
+          die();
+     }
+  }
+
+if(isset($_POST['btn_mba']) && $_GET['action']== 'sub_value')
+      
+  {
+      $sub_name = $_POST['subject'];  /*  dbname = college
+                                           collection = mca1_dbms      */  
+      $sem =$_POST['btn_mba'];
+      $db_name = "college";
+      $faculty_id = "18sksac005 ";
+      $coll_name = $sem."_".$sub_name;
+    
+      require '../generator/library/phpmongo/vendor/autoload.php';
+         $Client     =   new MongoDB\Client("mongodb://localhost:27017");
+         $db = new MongoDB\Client('mongodb://localhost');
+
+       $collection = $Client->$db_name->$coll_name;
+        $criteria = array('std_id' =>$faculty_id);
+          /*  Searching inside student lst  exits or not */
+      $cursor= $db->$db_name->$coll_name->findOne($criteria); 
+
+      /* finding One set */
+ foreach ($cursor as $cur) 
+ {}   if(empty($cur))
+       {
+            $date = date("d/m/yy");
+            $code = rand();
+            $document = array(
+            "std_id"=>$faculty_id,
+            "subject"=>$sub_name,
+            "date"=>$date,
+            "status"=>"A",
+            "qrcode"=>$code);
+                $insert = $collection->insertOne($document);
+      header("location:../generator/qrcode_gen.php?collection=".$coll_name);
+                    echo "successfully update";
+      
+     
+                        die();
+       }
+     else 
+     {
+         /* Insert into collections*/
+       $document = array("subject"=>$sub_name);
+         $deleteResult = $collection->deleteMany($document);
+           
+        header("location:../generator/qrcode_gen.php?collection=".$coll_name);
+         echo "successfully deleted ";
+         die();
+     }
+  }
 
 
 
