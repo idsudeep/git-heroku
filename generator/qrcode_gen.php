@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="../css/bootstrap.css">
-<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <title>Success</title>
@@ -143,7 +143,7 @@
     
     });                  
       
-                        }, 1000);/* time setting */
+                        }, 2000);/* time setting */
 }
     
   
