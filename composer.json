@@ -3,8 +3,6 @@
         "mongodb/mongodb": "^1.6"
     }
 }
-{
-  "require": {
-    "silex/silex": "~1.1",
-  }
-}
+
+
+
