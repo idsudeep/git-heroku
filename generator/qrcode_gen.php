@@ -140,7 +140,7 @@
     
     });                  
       
-                        }, 2000);/* time setting */
+                        }, 3000);/* time setting */
 }
     
   
