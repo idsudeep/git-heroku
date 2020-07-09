@@ -25,7 +25,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="visit.php">Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
            
           </ul>
          
@@ -106,9 +106,7 @@
         method: 'POST',
         data: {collection:collection},
         success: function(msg) {
-        //var story=JSON.parse(msg);
-        console.log(msg);
-            //alert(msg);
+      
             
             var code = msg;
             document.getElementById("content").value =code; /*passing response data to generator*/
@@ -140,7 +138,7 @@
     
     });                  
       
-                        }, 3000);/* time setting */
+                        }, 2000);
 }
     
   
