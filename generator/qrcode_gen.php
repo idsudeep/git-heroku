@@ -87,7 +87,7 @@
 	
     
     
-<?php $collect = $_GET['collect'];?>
+<?php $collect = $_POST['collect'];?>
 
 <script>
 
