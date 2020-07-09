@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="../css/bootstrap.css">
-<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script src="../js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <title>Success</title>
@@ -84,7 +84,9 @@
     	</div>
   
 	
-    
+    </body>
+</html>
+
     
 <?php $collection = $_GET['collection']; ?>
 
