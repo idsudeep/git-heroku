@@ -86,18 +86,14 @@
 	
     
     
-<?php 
-           
-           $collection = $_GET['collection'];
-       
-    ?>
+<?php $collection = $_GET['collection']; ?>
 
 <script type="application/javascript">
 
     
     
-    var collection = "MCA4_QTRA";
-       console.log(collection);
+    var collection = "<?php  echo $_GET['collection']?>";
+      
     
     
     function RefeshWhenLoad() {
