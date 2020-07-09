@@ -3,11 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="../css/bootstrap.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <title>Success</title>
 <link rel="stylesheet" href="../css/style.css">
+<link href="../css/Site.css" rel="stylesheet">    
 <script src="script/ajax_generate_code.js"></script>
 </head>
 <body onload ="RefeshWhenLoad()">
@@ -84,18 +85,16 @@
     	</div>
   
 	
-    </body>
-</html>
-
     
-<?php $collection = $_GET['collection']; ?>
+    
+<?php $collection = $_GET['collection'];?>
 
 <script type="application/javascript">
 
     
     
-    var collection = "<?php  echo $_GET['collection']?>";
-      
+       var collection = "<?php echo $collection ?>";
+       console.log(collection);
     
     
     function RefeshWhenLoad() {
@@ -141,7 +140,7 @@
     
     });                  
       
-                        }, 2000);/* time setting */
+                        }, 1000);/* time setting */
 }
     
   
