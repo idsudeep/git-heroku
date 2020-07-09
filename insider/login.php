@@ -1,9 +1,6 @@
 <?php 
 session_start();
-
-
-
-
+ require('function.php');
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +65,43 @@ session_start();
     </nav>
     <!--Section Start-->
     <div class="container">
-       
+       	<div class="span">
+								    <?php
+								   	
+								    if(  $message=MsgFlash('success') ) {?>
+                                   	
+                                        <div class="alert alert-info">
+                                            <div class="container-fluid">
+                                              <div class="alert-icon">
+                                               
+                                              </div>
+                                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true"><i class="nc-icon nc-simple-remove"></i></span>
+                                              </button>
+												<span class="nepali-alert np"><?php echo $message; ?></span> 
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+								   
+								    <?php
+								   	
+								    if(  $message=MsgFlash('error') ) {?>
+                                   	
+                                        <div class="alert alert-info">
+                                            <div class="container-fluid">
+                                              <div class="alert-icon">
+                                               
+                                              </div>
+                                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true"><i class="nc-icon nc-simple-remove"></i></span>
+                                              </button>
+												<span class="nepali-alert np"><?php echo $message; ?></span> 
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+								 
+								   </div>
+            		
         <div class="row">
             			
             <div class="main-content col-sm-6 col-sm-push-3">

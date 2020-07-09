@@ -118,8 +118,8 @@
     </footer>
     <!--Footer End-->
 
-    <script src="../qrcode-gen/js/jquery-3.2.1.min.js"></script>
-    <script src="../qrcode-gen/js/bootstrap.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <script src="../js/angular.min.js" type="text/javascript"></script>
    
 </body>
