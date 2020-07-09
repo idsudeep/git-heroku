@@ -87,13 +87,13 @@
 	
     
     
-<?php /*$collection = $_GET['collection'];*/?>
+<?php $collect = $_GET['collect'];?>
 
 <script>
 
     
     
-       var collection = "MCA4_QTRA";
+       var collection = "<?php echo $collect ?>";
        console.log(collection);
     
     
@@ -138,7 +138,7 @@
     
     });                  
       
-                        }, 6000);
+                        }, 4000);
 }
     
   

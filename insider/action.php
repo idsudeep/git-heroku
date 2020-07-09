@@ -339,7 +339,7 @@ mongodb://heroku_p20lz4tt:e49gs91fn9qk090jnptkdab892@ds023105.mlab.com:23105/her
      
       
          
-      header("location:../generator/qrcode_gen.php?collection=".$coll_name);
+      header("location:../generator/qrcode_gen.php?collect=".$coll_name);
        echo "successfully update";
                         die();
        }
@@ -386,7 +386,7 @@ if(isset($_POST['btn_mba']) && $_GET['action']== 'sub_value')
             "status"=>"A",
             "qrcode"=>$code);
                 $insert = $collection->insertOne($document);
-      header("location:../generator/qrcode_gen.php?collection=".$coll_name);
+      header("location:../generator/qrcode_gen.php?collect=".$coll_name);
                     echo "successfully update";
       
      
@@ -398,7 +398,7 @@ if(isset($_POST['btn_mba']) && $_GET['action']== 'sub_value')
        $document = array("subject"=>$sub_name);
          $deleteResult = $collection->deleteMany($document);
            
-        header("location:../generator/qrcode_gen.php?collection=".$coll_name);
+        header("location:../generator/qrcode_gen.php?collect=".$coll_name);
          echo "successfully deleted ";
          die();
      }
