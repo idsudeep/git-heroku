@@ -153,7 +153,7 @@
                 <div class=" col-sm-6 col-sm-push-3">
                 <div class="jumbotron">
                 <div id="page-container">
-                    <h5>Register's no:</h5>
+                    <h5 id="ack"></h5>
                  <hr>
                     <center> <video id="preview"></video></center>
                  
@@ -220,7 +220,7 @@
                     $.each(data, function(key, item) 
                         {
                 
-                        var fetch_qrcode = item.qrcode;
+                     var fetch_qrcode = item.qrcode;
                    var subject = item.subject;
  
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
