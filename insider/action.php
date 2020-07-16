@@ -153,8 +153,8 @@ if(isset($_POST['reg_btn']) && $_GET['action']=='register')
       
      /* $sql = "SELECT device_details.model_no, std_details.email, std_details.password FROM std_details LEFT JOIN device_details ON device_details.dd_id = std_details.sd_id AND std_details.email = '$email'";*/
      
-       $model= find_device();    /* make some changes*/
-        /*$model = 'Android 6.0.1; Redmi 3s'; */
+      /* $model= find_device();  */  /* make some changes*/
+        $model = 'Android 6.0.1; Redmi 3s'; 
       
     
     

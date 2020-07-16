@@ -96,7 +96,7 @@
     
     
        var collection = '<?php echo $_GET['collect']?>';
-       console.log(collection);
+      
     
     
     function RefeshWhenLoad() {
@@ -112,7 +112,7 @@
             
             var code = msg;
             
-            console.log(msg);
+          
             document.getElementById("content").value =code; /*passing response data to generator*/
                  }
     });
@@ -125,8 +125,7 @@
        dataType: "json",
     success: function(JSONObject) {
       var peopleHTML = "";
-          
-        console.log(JSONObject);
+      
       // Loop through Object and create peopleHTML
       for (var key in JSONObject) {
         if (JSONObject.hasOwnProperty(key)) {
