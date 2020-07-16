@@ -97,12 +97,12 @@
         </tr> 
         <tr>
             <td class="at"><span class="glyphicon glyphicon-home"> MCA</span></td> 
-            <td class="tdd"><button class="btn btn-success" name="btn_mca" value="mca1" onClick="return confirm('Are you sure you want to delete?')">1</button></td>
-            <td class="tdd"><button class="btn btn-primary" name="btn_mca" value="mca2">2</button></td>
-            <td class="tdd"><button class="btn btn-danger" name="btn_mca" value="mca3">3</button></td>
-             <td class="tdd"><button class="btn btn-success" name="btn_mca" value="mca4">4</button></td>
-             <td class="tdd"><button class="btn btn-primary" name="btn_mca" value="mca5">5</button></td>
-             <td class="tdd"><button class="btn btn-danger" name="btn_mca" value="mca6">6</button></td>
+            <td class="tdd"><button class="btn btn-success" name="btn_mca" value="MCA1" onClick="return confirm('Are you sure you want to delete?')">1</button></td>
+            <td class="tdd"><button class="btn btn-primary" name="btn_mca" value="MCA2">2</button></td>
+            <td class="tdd"><button class="btn btn-danger" name="btn_mca" value="MCA3">3</button></td>
+             <td class="tdd"><button class="btn btn-success" name="btn_mca" value="MCA4">4</button></td>
+             <td class="tdd"><button class="btn btn-primary" name="btn_mca" value="MCA5">5</button></td>
+             <td class="tdd"><button class="btn btn-danger" name="btn_mca" value="MCA6">6</button></td>
             
         </tr>
     </table> 

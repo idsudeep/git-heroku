@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,13 +87,15 @@
   
 	
     
+    </body>
+</html>
 
-
+  
 <script>
 
     
     
-       var collection = "MCA4_QTRA";
+       var collection = '<?php echo $_GET['collect']?>';
        console.log(collection);
     
     

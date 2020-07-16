@@ -292,12 +292,14 @@ if(isset($_POST['reg_btn']) && $_GET['action']=='register')
 mongodb://heroku_p20lz4tt:e49gs91fn9qk090jnptkdab892@ds023105.mlab.com:23105/heroku_p20lz4tt   */
       
        
-      $sub_name = 'QTRA';
-      $sem ='MCA4';
+      $sub_name = $_POST['subject'];
+      $sem =$_POST['btn_mca'];
       
       $faculty_id = "2468 ";
       $coll_name = $sem."_".$sub_name;
     
+      
+  
       require '../vendor/autoload.php';
       
        $uri = "mongodb://heroku_p20lz4tt:e49gs91fn9qk090jnptkdab892@ds023105.mlab.com:23105/heroku_p20lz4tt?retryWrites=false";
