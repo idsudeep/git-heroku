@@ -28,6 +28,6 @@ if(isset($_POST) && !empty($_POST)) {
 	 // display generated QR code
 	echo '<img class="img-thumbnail" src="'.$pngAbsoluteFilePath.'" />';
 } else {
-	header('location:./');
+	/*header('location:./qrcode_gen.php');*/
 }
 ?>

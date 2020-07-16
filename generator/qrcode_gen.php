@@ -106,6 +106,7 @@
        
         url: '../url/get_qrcode_db.php',
         method: 'POST',
+        dataType:'json',
         data: {collection:collection},
         success: function(msg) {
       
