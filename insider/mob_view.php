@@ -170,8 +170,10 @@ footer {
                     $course=$row['course'];
                     $collection = $course.$sem;
                
+                
                
-               
+            
+                 
             
                ?>
                
@@ -188,7 +190,7 @@ footer {
 	 <div class="datalist-holder">
    <input list="subject" name="subject" class="datalist-input"  placeholder="subject's"/>
     <datalist id="subject">
-       <option ng-repeat="x in customers | filter : {'<?php echo $collection;?>' : ''}" value="{{x.<?php echo $collection; ?>}}" >{{x.value}}<option hidden>
+       <option ng-repeat="x in subjects | filter : {'<?php echo $collection;?>' : ''}" value="{{x.<?php echo $collection; ?>}}" >{{x.value}}<option hidden>
     </datalist>
 </div>
     </div>
@@ -223,18 +225,18 @@ footer {
 <script>
 var app = angular.module('myApp', []);
 app.controller('arrCtrl', function($scope) {
-    $scope.customers = [
-        {"mca1" : "DBMS","value":"Database mangement system"},
-        {"mca1" : "DC","value":"Discret Math"},
+    $scope.subjects = [
+        {"MCA1" : "DBMS","value":"Database mangement system"},
+        {"MCA1" : "DC","value":"Discret Math"},
       
-        {"mca1" : "DCN","value":"Data communication Network"},
+        {"MCA1" : "DCN","value":"Data communication Network"},
         {"mca1" : "DBMSLab" ,"value":"Database Lab"},
       
-        {"mca4" : "SE","value":"software engineering"},
-        {"mca4" : "QTRA" ,"value":"quantiative technique Research"},
-        {"mca4" : "QT" ,"value":"quantiative technique"},
+        {"MCA4" : "SE","value":"software engineering"},
+        {"MCA4" : "QTRA" ,"value":"quantiative technique Research"},
+        {"MCA4" : "QT" ,"value":"quantiative technique"},
       
-        {"mca4" : "AD","value":"Advance alorithim"},
-        {"mca5" :"AJ","value":"Advance JAVA"}];
+        {"MCA4" : "AD","value":"Advance alorithim"},
+        {"MCA5" :"AJ","value":"Advance JAVA"}];
 });
 </script>
