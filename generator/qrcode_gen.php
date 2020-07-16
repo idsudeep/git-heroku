@@ -86,8 +86,7 @@
   
 	
     
-    
-<?php /*$collection = $_GET['collection'];*/?>
+
 
 <script>
 
@@ -109,6 +108,8 @@
       
             
             var code = msg;
+            
+            console.log(msg);
             document.getElementById("content").value =code; /*passing response data to generator*/
                  }
     });
