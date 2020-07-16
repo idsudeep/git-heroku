@@ -3,7 +3,7 @@
 require '../vendor/autoload.php';
 /*$coll_name = $_POST['collection'];*/
 
-$coll_name= 'MCA4_QTRA';
+$coll_name= $_POST['collection'];
 $dbname = "heroku_p20lz4tt";
 
 $uri = "mongodb://heroku_p20lz4tt:e49gs91fn9qk090jnptkdab892@ds023105.mlab.com:23105/heroku_p20lz4tt?retryWrites=false";

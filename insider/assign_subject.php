@@ -132,6 +132,6 @@
 	
 	app.controller("subjectCtrl",function($scope){
 		$scope.subject= [];
-	  $scope.subject =['','C#' ,'QTRA','DCN','Account','economic','soft skills'];
+	  $scope.subject =['','C#' ,'QTRA','DCN','AD','Account','economic','soft skills'];
 	});
 </script>
