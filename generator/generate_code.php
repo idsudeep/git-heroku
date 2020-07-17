@@ -1,4 +1,5 @@
 <?php 
+error_reporting(E_ALL);
 if(isset($_POST) && !empty($_POST)) {
 	include('library/phpqrcode/qrlib.php'); 
 	$codesDir = "codes/";	
