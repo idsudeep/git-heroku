@@ -1,10 +1,10 @@
 
 <?php
-/*b364dc1f607734:0909250f@us-cdbr-east-02.cleardb.com/heroku_766f338a18f2fea?reconnect=true*/
+/* mysql://bf05ca120624fb:181ac24a@us-cdbr-east-02.cleardb.com/heroku_4e956cc525a6de9?reconnect=true */
 $servername ="us-cdbr-east-02.cleardb.com";
-$username ="b364dc1f607734";
-$password="0909250f";
-$dbconnect="heroku_766f338a18f2fea";
+$username ="bf05ca120624fb";
+$password="181ac24a";
+$dbconnect="heroku_4e956cc525a6de9";
 
 
 // create a connection with database 
