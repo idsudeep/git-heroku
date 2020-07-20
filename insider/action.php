@@ -345,17 +345,13 @@ if(isset($_POST['reg_btn']) && $_GET['action']=='register')
        }
      else 
      {
-         /* Insert into collections*/
-       $document = array("subject"=>$sub_name);
-         $deleteResult = $collection->deleteMany($document);
-            header("location:../insider/assign_subject.php");
-           echo "successfully deleted ";
-          die();
+     
+       header("location:../generator/qrcode_gen.php?collect=".$coll_name);   
+         
      }
   }
 
-
-
+   
 
 
 ?>
