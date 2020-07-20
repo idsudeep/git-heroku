@@ -10,7 +10,7 @@
 <title>Success</title>
 <link rel="stylesheet" href="../css/style.css">
 <link href="../css/Site.css" rel="stylesheet">    
-
+<script src="script/ajax_generate_code.js" ></script>
 </head>
 <body onload ="RefeshWhenLoad()">
 <div role="navigation" class="navbar navbar-default navbar-static-top">
@@ -94,27 +94,7 @@
   
  <script>
      
-     $(document).ready(function() {
-	$("#codeForm").submit(function()
-                        
-                          {
-       
-		$.ajax({
-			url:'generate_code.php',
-			type:'POST',
-			data: {formData:$("#content").val(),  ecc:$("#ecc").val(), size:$("#size").val()},
-			success: function(response) {
-                
-                
-                
-                
-				$(".showQRCode").html(response); 
-                
-                
-			},
-		 });
-	});
-});
+     
      
    var collection = '<?php echo $_GET['collect']?>';
       
