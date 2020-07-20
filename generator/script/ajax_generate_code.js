@@ -6,7 +6,8 @@ $(document).ready(function() {
 		$.ajax({
 			url:'generate_code.php',
 			type:'POST',
-			data: {formData:3,  ecc:$("#ecc").val(), size:$("#size").val()},
+            datatype:'json',
+			data: {formData:$("#content").val(),  ecc:$("#ecc").val(), size:$("#size").val()},
 			success: function(response) {
                 
                 
