@@ -1,5 +1,6 @@
 <?php 
 error_reporting(E_ALL);
+
 if(isset($_POST) && !empty($_POST)) {
 	include('library/phpqrcode/qrlib.php'); 
 	$codesDir = "codes/";	
@@ -14,8 +15,7 @@ if(isset($_POST) && !empty($_POST)) {
     
     
      if (!file_exists($pngAbsoluteFilePath)) {
-          /*  QRcode::png($codeContents, $pngAbsoluteFilePath); 
-         */
+         
          QRcode::png($codeContents, $pngAbsoluteFilePath, $_POST['ecc'], $_POST['size']); 
             echo 'File generated!'; 
             echo '<hr />'; 
@@ -24,11 +24,11 @@ if(isset($_POST) && !empty($_POST)) {
             echo '<hr />'; 
         } 
     
-    // generating QR code
-	
-	 // display generated QR code
+
 	echo '<img class="img-thumbnail" src="'.$pngAbsoluteFilePath.'" />';
-} else {
-	/*header('location:./qrcode_gen.php');*/
-}
+} 
+
+else {
+	
+    }
 ?>

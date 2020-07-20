@@ -10,9 +10,12 @@ $(document).ready(function() {
 			success: function(response) {
                 
                 
-				$(".showQRCode").html(response);  
+                
+                
+				$(".showQRCode").html(response); 
+                
+                
 			},
 		 });
 	});
 });
-

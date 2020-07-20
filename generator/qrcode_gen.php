@@ -10,7 +10,7 @@
 <title>Success</title>
 <link rel="stylesheet" href="../css/style.css">
 <link href="../css/Site.css" rel="stylesheet">    
-<script src="script/ajax_generate_code.js"></script>
+
 </head>
 <body onload ="RefeshWhenLoad()">
 <div role="navigation" class="navbar navbar-default navbar-static-top">
@@ -42,7 +42,7 @@
 		        <form class="form-horizontal" method="post" id="codeForm" onsubmit="return false">
 		            <div class="form-group">
 		            	<label class="control-label">Code Content : </label>
-		            	<input class="form-control col-xs-1" id="content" type="text" required="required">
+		            	<input class="form-control col-xs-1" id="content" type="number" required="required">
 		            </div>
 		            <div class="form-group">
 		            	<label class="control-label">Code Level (ECC) : </label>
@@ -90,15 +90,34 @@
     </body>
 </html>
 
-  
-<script>
 
-    
-    
-       var collection = '<?php echo $_GET['collect']?>';
+  
+ <script>
+     
+     $(document).ready(function() {
+	$("#codeForm").submit(function()
+                        
+                          {
+       
+		$.ajax({
+			url:'generate_code.php',
+			type:'POST',
+			data: {formData:$("#content").val(),  ecc:$("#ecc").val(), size:$("#size").val()},
+			success: function(response) {
+                
+                
+                
+                
+				$(".showQRCode").html(response); 
+                
+                
+			},
+		 });
+	});
+});
+     
+   var collection = '<?php echo $_GET['collect']?>';
       
-    
-    
     function RefeshWhenLoad() {
   setInterval(function(){ 
       

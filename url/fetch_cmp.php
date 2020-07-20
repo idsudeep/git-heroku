@@ -21,7 +21,7 @@ $filter= ['limit' => 1];
 $query= new MongoDB\Driver\Query($filter);
 
 
-$db = new MongoDB\Client('mongodb://localhost'); /* undeline*/
+
  $cursor= $collection->find($query);
 
 $someArray = array();
