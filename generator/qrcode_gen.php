@@ -97,9 +97,9 @@
      
      
      
-   var collection = '<?php echo $_GET['collect']?>';
+   var collection = '<?php echo $_GET['collection']?>';
       
-    function RefeshWhenLoad() {
+function RefeshWhenLoad() {
   setInterval(function(){ 
       
           $.ajax({

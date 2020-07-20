@@ -339,14 +339,14 @@ if(isset($_POST['reg_btn']) && $_GET['action']=='register')
      
       
          
-      header("location:../generator/qrcode_gen.php?collect=".$coll_name);
+      header("location:../generator/qrcode_gen.php?collection=".$coll_name);
        echo "successfully update";
                         die();
        }
      else 
      {
      
-       header("location:../generator/qrcode_gen.php?collect=".$coll_name);   
+       header("location:../generator/qrcode_gen.php?collection=".$coll_name);   
          
      }
   }
