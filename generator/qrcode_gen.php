@@ -117,7 +117,22 @@ function RefeshWhenLoad() {
             document.getElementById("content").value =code; /*passing response data to generator*/
                  }
     });
-      $("#submit").submit(); 
+      
+       const codes = document.querySelector('#content').value;  
+      
+       if(codes == '')
+           {
+             console.log(codes);
+           }
+      
+      else{
+          
+           $("#submit").submit(); 
+          }
+      
+      
+        
+     
      
         $.ajax({
         url:'../url/get_table.php',
