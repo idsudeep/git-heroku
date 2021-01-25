@@ -74,7 +74,7 @@ if(isset($_POST['reg_btn']) && $_GET['action']=='register')
     
    
     
-                                        /* insert part */
+                                       
    if($sql->num_rows !=0)
 	{
 		
@@ -300,7 +300,7 @@ if(isset($_POST['reg_btn']) && $_GET['action']=='register')
   
       require '../vendor/autoload.php';
       
-       $uri = "mongodb://heroku_gtz0xx3x:b8g6cgtdcg3ucqehpmpfk7nmui@ds137283.mlab.com:37283/heroku_gtz0xx3x?retryWrites=false";
+       $uri = "mongodb://localhost";
        
       $client = new MongoDB\Client($uri);
       

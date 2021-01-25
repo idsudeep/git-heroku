@@ -6,12 +6,23 @@
 <link rel="stylesheet" href="../css/bootstrap.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
 <script src="../js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <title>Success</title>
 <link rel="stylesheet" href="../css/style.css">
 <link href="../css/Site.css" rel="stylesheet">    
+    <Script src="function.js"></Script>
 <script src="script/ajax_generate_code.js" ></script>
+    <style>
+        .bug{
+            
+            
+             position:absolute;
+        }
+    
+    </style>
 </head>
 <body onload ="RefeshWhenLoad()">
 <div role="navigation" class="navbar navbar-default navbar-static-top">
@@ -43,7 +54,7 @@
 		        <form class="form-horizontal" method="post" id="codeForm" onsubmit="return false">
 		            <div class="form-group">
 		            	<label class="control-label">Code Content : </label>
-		            	<input class="form-control col-xs-1" id="content" type="number" required="required">
+		            	<input class="form-control col-xs-1" id="content" name="content" type="number" required="required">
 		            </div>
 		            <div class="form-group">
 		            	<label class="control-label">Code Level (ECC) : </label>
@@ -65,22 +76,26 @@
 		        </form>
 	    	</div>
             <div class="col-md-4">
-	    		<div class="showQRCode"></div>
+	    		<div id="qr_code" ></div>
+                <div class="bug">
+                
+                <img id="can" >
+                </div>
 	    	</div>
             <div class="col-sm-4">
             <h4>scanned user</h4>
-            
+            <input type="number" id="#" >
                <table id="people" border="1" class="table table-bordered">
              <thead>
-               <th>std_id</th>
+               <th >std_id</th>
                <th>status</th>
-                 <th>Qrcode</th>
+                 <th>qrcode</th>
           </thead>
   <tbody>
 
   </tbody>
 </table>
-            
+        
             </div>
             </div>
 	    	
@@ -95,12 +110,17 @@
   
  <script>
      
-     
+
      
    var collection = '<?php echo $_GET['collection']?>';
       
 function RefeshWhenLoad() {
-  setInterval(function(){ 
+  var inter = setInterval(function(){ 
+      
+      
+  
+   
+      
       
           $.ajax({
        
@@ -113,28 +133,43 @@ function RefeshWhenLoad() {
             
             var code = msg;
             
-           console.log(msg);
+           /*console.log(msg);*/
             document.getElementById("content").value =code; /*passing response data to generator*/
-                 }
+                
+        
+        
+        
+        }
     });
       
+   
        const codes = document.querySelector('#content').value;  
+    
+    console.log(codes);
+        var calll = compare(codes);
       
-       if(codes == '')
-           {
-             console.log(codes);
-           }
-      
-      else{
-          
-           $("#submit").submit(); 
+  console.log(calll);
+      if(calll === undefined)
+          {
+              
+          /*   console.log('undefined');*/
+              
+              if(calll !=codes)
+                  
+                  {
+                      
+                       $('#submit').submit();
+                  }
+              
+            
+             
           }
-      
-      
-        
+              
+               
+    
+    
      
-     
-        $.ajax({
+      $.ajax({
         url:'../url/get_table.php',
         data:{collection:collection},
         method:'POST',
@@ -146,9 +181,9 @@ function RefeshWhenLoad() {
       for (var key in JSONObject) {
         if (JSONObject.hasOwnProperty(key)) {
           peopleHTML += "<tr>";
-            peopleHTML += "<td>" + JSONObject[key]["std_id"] + "</td>";
-            peopleHTML += "<td>" + JSONObject[key]["status"] + "</td>";
-            peopleHTML += "<td>" + JSONObject[key]["qrcode"] + "</td>";
+           /* peopleHTML += "<td>" + JSONObject[key]["std_id"] + "</td>";
+            peopleHTML += "<td>" + JSONObject[key]["status"] + "</td>";*/
+            peopleHTML += "<td >"+ JSONObject[key]["qrcode"] + "</td>";
           peopleHTML += "</tr>";
         }
       }
@@ -156,11 +191,16 @@ function RefeshWhenLoad() {
     }
     
     });                  
-      
-                        }, 6000);
-}
-    
   
+    /* clearInterval(inter);*/
+                    
+  }, 800);
+}
+     
+     
+     
+    
+
     
 
 </script>

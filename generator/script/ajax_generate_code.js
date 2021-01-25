@@ -1,23 +1,40 @@
+
+
 $(document).ready(function() {
-	$("#codeForm").submit(function()
+	$("#codeForm").submit(function(e)
                         
-                          {
-       
-		$.ajax({
-			url:'generate_code.php',
-			type:'POST',
-            datatype:'json',
-			data: {formData:$("#content").val(),  ecc:$("#ecc").val(), size:$("#size").val()},
-			success: function(response) {
-                
-                
-                
-               
-                
-				$(".showQRCode").html(response); 
-                
-                
-			},
-		 });
-	});
+          {
+         e.preventDefault();
+         
+	   /*   $("#con").change(function(){
+              
+              alert('here');*/
+        
+      
+        /*  alert("high");*/ 
+        var qrcode = new QRCode(document.getElementById("qr_code"), {
+         text:  $("#content").val(),
+         width: 260,
+         height: 260,
+         colorDark : "#000000",
+         colorLight : "#ffffff",
+         correctLevel : QRCode.CorrectLevel.H
+       });
+
+     /* qrcode.clear();*/
+       const parent = document.getElementById('qr_code');
+
+        var can = document.getElementsByTagName("canvas");
+        var src = can[0].toDataURL("image/png");
+        var cs = document.getElementById('can');
+        
+        $('#can').attr('src', src);
+       /* window.location.reload(true);*/
+        
+        
+        console.log(qrcode);   
+              
+              
+       /*   });*/
+    });
 });

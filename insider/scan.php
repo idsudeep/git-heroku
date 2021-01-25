@@ -217,7 +217,7 @@
                   console.log(data1);
                   
                 var data = jQuery.parseJSON(data1);
-                    $.each(data, function(key, item) 
+                    $.each(data, function(key, item)  /* data1 is missing*/
                         {
                 
                      var fetch_qrcode = item.qrcode;

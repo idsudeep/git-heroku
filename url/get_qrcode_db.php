@@ -6,7 +6,7 @@ require '../vendor/autoload.php';
 $coll_name= $_POST['collection'];
 $dbname = "heroku_gtz0xx3x";
 
-$uri = "mongodb://heroku_gtz0xx3x:b8g6cgtdcg3ucqehpmpfk7nmui@ds137283.mlab.com:37283/heroku_gtz0xx3x?retryWrites=false";
+$uri = "mongodb+srv://heroku_gtz0xx3x:<password>@cluster0.pzefk.mongodb.net/<dbname>?retryWrites=true&w=majority";
        
       $client = new MongoDB\Client($uri);
       
